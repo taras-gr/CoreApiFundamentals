@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using AutoMapper;
 using CoreCodeCamp.Data;
@@ -22,7 +23,7 @@ namespace CoreCodeCamp
       services.AddDbContext<CampContext>();
       services.AddScoped<ICampRepository, CampRepository>();
 
-      services.AddAutoMapper(typeof(CampProfile));
+      services.AddAutoMapper(Assembly.GetEntryAssembly());
 
       services.AddMvc()
         .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
