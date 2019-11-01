@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CoreCodeCamp.Migrations
 {
     [DbContext(typeof(CampContext))]
-    [Migration("20191027164453_Initial")]
-    partial class Initial
+    [Migration("20191101155917_Init")]
+    partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
